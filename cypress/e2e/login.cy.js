@@ -2,17 +2,19 @@ describe('Login', () => {
 
   beforeEach(() => {
     // Arrange
-    cy.log('Iniciando...')
+    cy.visit('/')
 
-
+/*
     cy.env(['url']).then((url) => {
       cy.log(url)
 
-      cy.visit(url)
+      cy.visit('url')
     })
+
+*/
     cy.screenshot('apos-visitar-pagina')
   })
-  it.only('Login com dados válidos deve permitir entrada no sistema', () => {
+  it('Login com dados válidos deve permitir entrada no sistema', () => {
 
     // Act
     cy.fixture('credenciais').then(credenciais => {
